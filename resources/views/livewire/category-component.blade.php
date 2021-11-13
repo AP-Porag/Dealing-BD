@@ -5,7 +5,7 @@
         <div class="wrap-breadcrumb">
             <ul>
                 <li class="item-link"><a href="{{route('home')}}" class="link">home</a></li>
-                <li class="item-link"><span>Shop</span></li>
+                <li class="item-link"><span>{{$category_name}}</span></li>
             </ul>
         </div>
         <div class="row">
@@ -20,7 +20,7 @@
 
                 <div class="wrap-shop-control">
 
-                    <h1 class="shop-title text-capitalize">All Category product</h1>
+                    <h1 class="shop-title text-capitalize">{{$category_name}}</h1>
 
                     <div class="wrap-right">
 
@@ -81,13 +81,13 @@
 
                 <div class="wrap-pagination-info">
                     {{$products->links()}}
-{{--                    <ul class="page-numbers">--}}
-{{--                        <li><span class="page-number-item current" >1</span></li>--}}
-{{--                        <li><a class="page-number-item" href="#" >2</a></li>--}}
-{{--                        <li><a class="page-number-item" href="#" >3</a></li>--}}
-{{--                        <li><a class="page-number-item next-link" href="#" >Next</a></li>--}}
-{{--                    </ul>--}}
-{{--                    <p class="result-count">Showing 1-8 of 12 result</p>--}}
+                    {{--                    <ul class="page-numbers">--}}
+                    {{--                        <li><span class="page-number-item current" >1</span></li>--}}
+                    {{--                        <li><a class="page-number-item" href="#" >2</a></li>--}}
+                    {{--                        <li><a class="page-number-item" href="#" >3</a></li>--}}
+                    {{--                        <li><a class="page-number-item next-link" href="#" >Next</a></li>--}}
+                    {{--                    </ul>--}}
+                    {{--                    <p class="result-count">Showing 1-8 of 12 result</p>--}}
                 </div>
             </div><!--end main products area-->
 
@@ -101,15 +101,15 @@
                                     <a href="{{route('product-category',['category_slug'=>$category->slug])}}" class="cate-link text-capitalize">{{$category->name}}</a>
                                 </li>
                             @endforeach
-{{--                            <li class="category-item has-child-cate">--}}
-{{--                                <a href="#" class="cate-link">Fashion & Accessories</a>--}}
-{{--                                <span class="toggle-control">+</span>--}}
-{{--                                <ul class="sub-cate">--}}
-{{--                                    <li class="category-item"><a href="#" class="cate-link">Batteries (22)</a></li>--}}
-{{--                                    <li class="category-item"><a href="#" class="cate-link">Headsets (16)</a></li>--}}
-{{--                                    <li class="category-item"><a href="#" class="cate-link">Screen (28)</a></li>--}}
-{{--                                </ul>--}}
-{{--                            </li>--}}
+                            {{--                            <li class="category-item has-child-cate">--}}
+                            {{--                                <a href="#" class="cate-link">Fashion & Accessories</a>--}}
+                            {{--                                <span class="toggle-control">+</span>--}}
+                            {{--                                <ul class="sub-cate">--}}
+                            {{--                                    <li class="category-item"><a href="#" class="cate-link">Batteries (22)</a></li>--}}
+                            {{--                                    <li class="category-item"><a href="#" class="cate-link">Headsets (16)</a></li>--}}
+                            {{--                                    <li class="category-item"><a href="#" class="cate-link">Screen (28)</a></li>--}}
+                            {{--                                </ul>--}}
+                            {{--                            </li>--}}
                         </ul>
                     </div>
                 </div><!-- Categories widget-->
